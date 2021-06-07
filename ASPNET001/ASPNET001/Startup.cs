@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ASPNET
+namespace ASPNET001
 {
     public class Startup
     {
@@ -26,6 +26,7 @@ namespace ASPNET
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<IValuesHolder, ValuesHolder>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

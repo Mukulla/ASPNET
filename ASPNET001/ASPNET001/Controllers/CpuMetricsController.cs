@@ -15,11 +15,19 @@ namespace ASPNET001.Controllers
         public IActionResult GetMetricsFromAgent([FromRoute] int agentId, [FromRoute] TimeSpan fromTime, [FromRoute] TimeSpan toTime)
         {
             return Ok();
-        }        
+        }
+        
+        [HttpGet("cluster/from/{fromTime}/to/{toTime}}/percentiles/{percentile}")]
+        public IActionResult GetMetricsFromAllCluster([FromRoute] TimeSpan fromTime, [FromRoute] TimeSpan toTime, [FromRoute] int percentiles)
+        {
+            return Ok();
+        }
+
         [HttpGet("cluster/from/{fromTime}/to/{toTime}")]
         public IActionResult GetMetricsFromAllCluster([FromRoute] TimeSpan fromTime, [FromRoute] TimeSpan toTime)
         {
             return Ok();
         }
+       
     }
 }

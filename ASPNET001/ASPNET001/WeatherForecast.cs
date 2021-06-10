@@ -1,6 +1,6 @@
 using System;
 
-namespace ASPNET
+namespace ASPNET001
 {
     public class WeatherForecast
     {

@@ -16,7 +16,7 @@
     {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/metrics",
+      "launchUrl": "api/metrics/dotnet",
       "environmentVariables": 
       {
         "ASPNETCORE_ENVIRONMENT": "Development"

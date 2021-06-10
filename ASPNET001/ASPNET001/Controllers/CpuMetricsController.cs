@@ -17,7 +17,7 @@ namespace ASPNET001.Controllers
             return Ok();
         }
         
-        [HttpGet("cluster/from/{fromTime}/to/{toTime}}/percentiles/{percentile}")]
+        [HttpGet("cluster/from/{fromTime}/to/{toTime}/percentiles/{percentile}")]
         public IActionResult GetMetricsFromAllCluster([FromRoute] TimeSpan fromTime, [FromRoute] TimeSpan toTime, [FromRoute] int percentiles)
         {
             return Ok();

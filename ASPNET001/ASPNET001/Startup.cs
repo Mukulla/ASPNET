@@ -26,7 +26,6 @@ namespace ASPNET001
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddSingleton<IValuesHolder, ValuesHolder>();
             services.AddSingleton<IAgentInfo, AgentInfo>();
         }
 

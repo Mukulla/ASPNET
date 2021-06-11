@@ -7,11 +7,11 @@ namespace MetricsManagerTests
 {
     public class CpuMetricsControllerUnitTests
     {
-        private CpuMetricsController CpuController;
+        private CpuMetricsController cpu—ontroller;
 
         public CpuMetricsControllerUnitTests()
         {
-            CpuController = new CpuMetricsController();
+            cpu—ontroller = new CpuMetricsController();
         }
 
         [Fact]
@@ -22,7 +22,7 @@ namespace MetricsManagerTests
             var fromTime = TimeSpan.FromSeconds(0);
             var toTime = TimeSpan.FromSeconds(100);
             //Act
-            var result = CpuController.GetMetricsFromAgent(agentId, fromTime, toTime);
+            var result = cpu—ontroller.GetMetricsFromAgent(agentId, fromTime, toTime);
             // Assert
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
@@ -31,7 +31,7 @@ namespace MetricsManagerTests
         [Fact]
         public void GetMetricsFromAllClusterFrist_ReturnsOk()
         {
-            var result = CpuController.GetMetricsFromAllCluster(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100), 12);
+            var result = cpu—ontroller.GetMetricsFromAllCluster(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100), 12);
 
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
@@ -40,24 +40,24 @@ namespace MetricsManagerTests
         [Fact]
         public void GetMetricsFromAllClusterSecond_ReturnsOk()
         {
-            var result = CpuController.GetMetricsFromAllCluster(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100));
+            var result = cpu—ontroller.GetMetricsFromAllCluster(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100));
 
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
     }
     public class DotNetMetricsControllerUnitTests
     {
-        private DotNetMetricsController DotNetController;
+        private DotNetMetricsController dotnet—ontroller;
 
         public DotNetMetricsControllerUnitTests()
         {
-            DotNetController = new DotNetMetricsController();
+            dotnet—ontroller = new DotNetMetricsController();
         }
 
         [Fact]
         public void GetMetricsFromErrorsCount_ReturnsOk()
         {
-            var result = DotNetController.GetErrorsCount(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100));
+            var result = dotnet—ontroller.GetErrorsCount(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100));
 
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
@@ -66,17 +66,17 @@ namespace MetricsManagerTests
     
     public class HddMetricsControllerUnitTests
     {
-        private HddMetricsController HddController;
+        private HddMetricsController hdd—ontroller;
 
         public HddMetricsControllerUnitTests()
         {
-            HddController = new HddMetricsController();
+            hdd—ontroller = new HddMetricsController();
         }
 
         [Fact]
         public void GetGetLeftSpace_ReturnsOk()
         {
-            var result = HddController.GetLeftSpace();
+            var result = hdd—ontroller.GetLeftSpace();
 
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
@@ -84,18 +84,18 @@ namespace MetricsManagerTests
    
     public class NetworkMetricsControllerUnitTests
     {
-        private NetworkMetricsController NetworkController;
+        private NetworkMetricsController network—ontroller;
 
         public NetworkMetricsControllerUnitTests()
         {
-            NetworkController = new NetworkMetricsController();
+            network—ontroller = new NetworkMetricsController();
         }
 
 
         [Fact]
         public void GetGetLeftSpace_ReturnsOk()
         {
-            var result = NetworkController.GetNetworkBandwidth(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100));
+            var result = network—ontroller.GetNetworkBandwidth(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(100));
 
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }
@@ -103,18 +103,18 @@ namespace MetricsManagerTests
  
     public class RamMetricsControllerUnitTests
     {
-        private RamMetricsController RamController;
+        private RamMetricsController ram—ontroller;
 
         public RamMetricsControllerUnitTests()
         {
-            RamController = new RamMetricsController();
+            ram—ontroller = new RamMetricsController();
         }
 
 
         [Fact]
         public void GetGetLeftSpace_ReturnsOk()
         {
-            var result = RamController.GetAvailableSpace();
+            var result = ram—ontroller.GetAvailableSpace();
 
             _ = Assert.IsAssignableFrom<IActionResult>(result);
         }

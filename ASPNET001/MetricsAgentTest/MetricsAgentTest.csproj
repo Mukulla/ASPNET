@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ASPNET001\MetricsManager.csproj" />
+    <ProjectReference Include="..\MetricsAgent\MetricsAgent.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,14 +5,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ASPNET001.Controllers
+namespace MetricsManager.Controllers
 {
     [Route("api/metrics/ram")]
     [ApiController]
     public class RamMetricsController : ControllerBase
     {
-        [HttpGet("available")]
-        public IActionResult GetAvailableSpace()
+        [HttpGet("available/agent/{agentId}/from/{fromTime}/to/{toTime}")]
+        public IActionResult GetMetricsFromAgent([FromRoute] int agentId, [FromRoute] DateTimeOffset fromTime, [FromRoute] DateTimeOffset toTime)
+        {
+            return Ok();
+        }
+
+        [HttpGet("cluster/from/{fromTime}/to/{toTime}")]
+        public IActionResult GetMetricsFromAllCluster([FromRoute] DateTimeOffset fromTime, [FromRoute] DateTimeOffset toTime)
         {
             return Ok();
         }

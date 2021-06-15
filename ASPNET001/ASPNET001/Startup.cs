@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ASPNET001
+namespace MetricsManager
 {
     public class Startup
     {
@@ -27,7 +27,6 @@ namespace ASPNET001
         {
             services.AddControllers();
             services.AddSingleton<IAgentInfo, AgentInfo>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

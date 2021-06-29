@@ -6,8 +6,8 @@
     "anonymousAuthentication": true,
     "iisExpress": 
     {
-      "applicationUrl": "http://localhost:31432"
-      //"sslPort": 44365
+      "applicationUrl": "http://localhost:4091",
+      "sslPort": 44302
     }
   },
   "profiles": 
@@ -16,7 +16,7 @@
     {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/metrics",
+      "launchUrl": "MetricsAgent",
       "environmentVariables": 
       {
         "ASPNETCORE_ENVIRONMENT": "Development"
